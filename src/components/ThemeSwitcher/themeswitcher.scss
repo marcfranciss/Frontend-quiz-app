@@ -1,0 +1,62 @@
+@use "../../styles/abstracts/" as *;
+
+#theme-switch {
+    display: none;
+}
+.theme-switch-container {
+    @include flex(row, center, center);
+    gap: 16px;
+    @include media-query($mobile) {
+        gap: 8px;
+    }
+}
+.switcher-container {
+    display: flex;
+    max-width: 48px;
+    max-height: 28px;
+    @include media-query($mobile) {
+        max-width: 32px;
+        max-height: 20px;
+    }
+}
+.switcher-icon {
+    width: 24px;
+    height: 24px;
+    @include media-query($mobile) {
+        width: 16px;
+        height: 16px;
+    }
+}
+.switcher-button {
+    cursor: pointer;
+    background-color: $purple;
+    width: 48px;
+    height: 28px;
+    border-radius: 200px;
+    position: relative;
+    @include media-query($mobile) {
+        max-width: 32px;
+        max-height: 20px;
+    }
+}
+
+.switcher-button:before {
+    position: absolute;
+    content: "";
+    background-color: whitesmoke;
+    width: 20px;
+    height: 20px;
+    border-radius: 200px;
+    margin: 4px;
+    transition: 0.4s;
+    @include media-query($mobile) {
+        width: 12px;
+        height: 12px;
+    }
+}
+#theme-switch:checked + .switcher-button::before {
+    transform: translateX(20px);
+    @include media-query($mobile) {
+        transform: translateX(12px);
+    }
+}

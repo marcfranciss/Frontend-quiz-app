@@ -1,0 +1,14 @@
+@use "../../styles/abstracts/" as *;
+header {
+    width: 100%;
+}
+.header-container {
+    @include flex(row, space-between, center);
+    h1 {
+        width: fit-content;
+        height: auto;
+    }
+    .subject-container {
+        cursor: default;
+    }
+}

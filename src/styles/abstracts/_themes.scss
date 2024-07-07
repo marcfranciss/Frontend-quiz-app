@@ -1,0 +1,33 @@
+@use "./colors" as *;
+
+$themes: (
+    light: (
+        text: $dark-navy,
+        main-bg: #F4F6FA,
+        bg: $pure-white,
+        url-dekstop: url(./assets/images/pattern-background-desktop-dark.svg) top left / cover no-repeat,
+        url-tablet: url(./assets/images/pattern-background-tablet-dark.svg) top left / cover no-repeat,
+        url-mobile: url(./assets/images/pattern-background-mobile-dark.svg) top left / cover no-repeat,
+    ),
+    dark: (
+        text: $pure-white,
+        main-bg: #313E51,
+        bg: $navy,
+        url-dekstop: url(./assets/images/pattern-background-desktop-light.svg) top left / cover no-repeat,
+        url-tablet: url(./assets/images/pattern-background-tablet-light.svg) top left / cover no-repeat,
+        url-mobile: url(./assets/images/pattern-background-mobile-light.svg) top left / cover no-repeat,
+    )
+);
+
+@mixin theme($themes) {
+    @each $name, $values in $themes {
+        .#{$name}-theme {
+            $theme-map: $values !global;
+            @content;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

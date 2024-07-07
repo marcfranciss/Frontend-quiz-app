@@ -1,0 +1,167 @@
+@use "./styles/abstracts/" as *;
+
+/* global theme switcher */
+@include theme($themes) {
+    background: themed('url-dekstop') themed('main-bg');
+    background-blend-mode: overlay;
+    @include media-query($tablet) {
+        background: themed('url-tablet') themed('main-bg');
+        background-blend-mode: overlay;
+    }
+    @include media-query($mobile) {
+        background: themed('url-mobile') themed('main-bg');
+        background-blend-mode: overlay;
+    }
+    body {
+        background-color: themed('bg');
+    }
+    h1, h2, h3, p, label {
+        color: themed('text');
+    }
+    .option-container {
+        color: themed('text');
+        background-color: themed('bg');
+    }
+    .progress-container {
+        background-color: themed('bg');
+    }
+    .score-container {
+        background-color: themed('bg');
+    }
+}
+@include font-body($body) {
+            font-size: body('desktop');
+            @include media-query($tablet) {
+                font-size: body('tablet');
+            }
+            @include media-query($mobile) {
+                font-size: body('mobile');
+            }
+        
+}
+@include font-header($headers) {
+    font-size: headers('desktop');
+    @include media-query($tablet) {
+        font-size: headers('tablet');
+    }
+    @include media-query($mobile) {
+        font-size: headers('mobile');
+    }
+
+}
+header, main, section {
+    width: 100%;
+}
+.page-container {
+    width: 100%;
+    @include flex(column, null, center);
+    
+}
+.app-container {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    @include flex(column, null, center);
+    padding-block-start: 5.25rem;
+    padding-inline: 8.75rem;
+    font-family: Rubik;
+    @include media-query($tablet) {
+        padding-block-start: 2.5rem;
+        padding-inline: 4rem;
+        padding-block-end: 3.5rem;
+    }
+    @include media-query($mobile) {
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+    }
+}
+
+.main-container {
+    @include flex(row, center, null);
+    margin-block-start: 3.375em;
+    flex-wrap: wrap;
+    width: 100%;
+    @include media-query($tablet) {
+        @include flex(column, null, null);
+        margin-block-start: 3rem;
+    }
+    @include media-query($mobile) {
+        margin-block-start: 2rem;
+    }
+    .left-pane {
+        width: 50%;
+        padding-right: 5rem;
+        @include flex(column, flex-start, flex-start);
+        h2 {
+            font-style: normal;
+            margin:0;
+        }
+        h3 {
+            font-weight: $medium;
+            margin-bottom: 3rem;
+            @include media-query($mobile) {
+                margin-bottom: 1rem;
+            }
+        }
+        p {
+            color: $grey-navy;
+        font-style: italic;}
+        @include media-query($tablet) {
+            width: 100%;
+            margin-bottom: 4rem;
+            padding-right: 0;
+        };
+        @include media-query($mobile) {
+            margin-bottom: 2.5rem;
+        }
+    }
+    .right-pane {
+        width: 50%;
+        @include media-query($tablet)
+        {width: 100%;};
+    }
+    
+    .checked {
+        background-color: $purple !important;
+        outline: $purple solid 3px;
+    }
+    .option-container {
+        @include flex(row, space-between, null);
+        $outer: 24px;
+        $gap: 18px;
+        border-radius: $outer;
+        width: 100%;
+        margin-bottom: 24px;
+        box-shadow: 0 16px 40px 0 rgba(#8FA0C1, 0.14);
+        outline: none;
+        padding: $gap;
+        @include media-query($mobile) {
+            $outer: 12px;
+            $gap: 12px;
+            padding: $gap;
+            border-radius: $outer;
+            margin-bottom: $gap;
+        }
+
+        @include option-bg; //dynamic background
+        
+    }
+    
+    input[type=radio] {
+        display: none;
+    }
+}
+
+.quiz-container {
+    @include flex(row, center, null);
+    margin-block-start: 3.375em;
+    flex-wrap: wrap;
+    width: 100%;
+    @include media-query($tablet) {
+        @include flex(column, null, null);
+        margin-block-start: 3rem;
+    }
+    @include media-query($tablet) {
+        margin-block-start: 2rem;
+    }
+}

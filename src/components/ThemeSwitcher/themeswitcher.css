@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  cursor: default;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* input,
+button,
+textarea,
+select {
+  font: inherit;
+} */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+#theme-switch {
+  display: none;
+}
+
+.theme-switch-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 40em) {
+  .theme-switch-container {
+    gap: 8px;
+  }
+}
+
+.switcher-container {
+  display: flex;
+  max-width: 48px;
+  max-height: 28px;
+}
+@media (max-width: 40em) {
+  .switcher-container {
+    max-width: 32px;
+    max-height: 20px;
+  }
+}
+
+.switcher-icon {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 40em) {
+  .switcher-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.switcher-button {
+  cursor: pointer;
+  background-color: hsl(277, 91%, 56%);
+  width: 48px;
+  height: 28px;
+  border-radius: 200px;
+  position: relative;
+}
+@media (max-width: 40em) {
+  .switcher-button {
+    max-width: 32px;
+    max-height: 20px;
+  }
+}
+
+.switcher-button:before {
+  position: absolute;
+  content: "";
+  background-color: whitesmoke;
+  width: 20px;
+  height: 20px;
+  border-radius: 200px;
+  margin: 4px;
+  transition: 0.4s;
+}
+@media (max-width: 40em) {
+  .switcher-button:before {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+#theme-switch:checked + .switcher-button::before {
+  transform: translateX(20px);
+}
+@media (max-width: 40em) {
+  #theme-switch:checked + .switcher-button::before {
+    transform: translateX(12px);
+  }
+}/*# sourceMappingURL=themeswitcher.css.map */

@@ -1,0 +1,24 @@
+$purple: hsl(277, 91%, 56%);
+$dark-navy: hsl(216, 25%, 25%);
+$navy: hsl(215, 27%, 32%);
+$grey-navy: hsl(219, 13%, 44%);
+$light-bluish: hsl(216, 47%, 78%);
+$light-gray: hsl(220, 38%, 97%);
+$pure-white: hsl(0, 0%, 100%);
+$correct: hsl(151, 70%, 50%);
+$wrong: hsl(0, 82%, 63%);
+
+$o-bg: (
+  HTML:#FFF1E9,
+  CSS: #E0FDEF,
+  JavaScript: #EBF0FF,
+  Accessibility: #F6E7FF,
+);
+
+@mixin option-bg {
+    @each $name, $color in $o-bg {
+        .bg-#{$name} {
+            background-color: $color !important;
+        }
+    }
+}

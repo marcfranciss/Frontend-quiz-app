@@ -1,0 +1,124 @@
+@use "../../styles/abstracts/" as *;
+
+.right-pane {
+    width: 50%;
+    @include media-query($tablet) {
+        width: 100%;
+    }
+}
+
+.checked {
+    background-color: $purple !important;
+    outline: $purple solid 3px;
+}
+.option-container {
+    @include flex(row, space-between, null);
+    $outer: 24px;
+    $gap: 18px;
+    border-radius: $outer;
+    width: 100%;
+    margin-bottom: 24px;
+    box-shadow: 0 16px 40px 0 rgba(#8FA0C1, 0.14);
+    outline: none;
+    padding: $gap;
+
+    @include media-query($mobile) {
+        $outer: 12px;
+        $gap: 12px;
+        padding: $gap;
+        border-radius: $outer;
+        margin-bottom: $gap;
+    }
+
+    &:has(input:checked) {
+        outline: $purple solid 3px;
+        .option-letter {
+            background-color: $purple;
+            color: $pure-white;
+        }
+    }
+    &:has(input:checked).correct {
+        outline: $correct solid 3px;
+        .option-letter {
+            background-color: $correct;
+            color: $pure-white;
+        }
+        img {
+            visibility: visible;
+        }
+    }
+    &:not(input:checked).correct {        
+        img {
+            visibility: visible;
+        }
+    }
+    &:has(input:checked).wrong {
+        outline: $wrong solid 3px;
+        .option-letter {
+            background-color: $wrong;
+            color: $pure-white;
+        } img {
+            visibility: visible;
+        }
+    }
+    &:not(input:checked).wrong img{
+        visibility: hidden;
+    }
+    &:has(input:checked).wrong img{
+        visibility: visible;
+    }
+    &:hover .option-letter {
+        background-color: #F6E7FF;
+        color: $purple;
+    }
+    .option-label {
+        @include flex(row, null, center);
+        cursor: pointer;
+        font-weight: 500;
+        width: 100%;
+        gap: 2rem;
+        
+        @include media-query($mobile) {
+            gap: 1rem;
+        }
+    }
+    .option-letter {
+        align-content: center;
+        text-align: center;
+        width: 56px;
+        height: 56px;
+        color: $grey-navy;
+        background-color: $light-gray;
+        border-radius: 12px;
+
+        @include media-query($mobile) {
+            $outer: 6px;
+            $gap: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: $outer;
+        }
+    }
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.error-option {
+    margin-top: 2rem;
+    @include flex(row, center, center);
+    gap:1rem;
+    color: $wrong;
+
+    @include media-query($mobile) {
+        margin-top: 12px;
+    }
+    .result-icon {
+        width: 40px;
+        aspect-ratio: 1;
+        @include media-query($mobile){
+        width: 32px;}
+        
+    }
+}

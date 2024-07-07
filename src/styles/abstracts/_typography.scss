@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$bold: 700;
+$medium: 500;
+$reg: 400;
+
+$headers:(
+    large: (
+        desktop: 4em,
+        tablet: 4em,
+        mobile: 2.5em,),
+    medium: (
+        desktop: 2.25em,
+        tablet: 2.25em,
+        mobile: 1.25em,),
+    small: (
+        desktop: 1.75em,
+        tablet: 1.75em,
+        mobile: 1.125em,),
+);
+$body:(
+    large: (
+        desktop: 4em,
+        tablet: 4em,
+        mobile: 2.5em,),
+    medium: (
+        desktop: 2.25em,
+        tablet: 2.25em,
+        mobile: 1.25em,),
+    small: (
+        desktop: 1.25em,
+        tablet: 1.75em,
+        mobile: 0.875em,),
+);
+
+@mixin font-body($body) {
+    @each $name, $values in $body {
+        .body-#{$name} {
+            $body-map: $values !global;
+            @content;
+        }
+    }
+}
+@mixin font-header($headers) {
+    
+    @each $name, $values in $headers {
+        .header-#{$name} {
+            $headers-map: $values !global;
+            @content;
+        }
+    }
+}
+
+@function headers($key) {
+    @return map-get($headers-map, $key);
+}
+@function body($key) {
+    @return map-get($body-map, $key);
+}

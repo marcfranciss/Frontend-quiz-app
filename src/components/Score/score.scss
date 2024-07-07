@@ -1,0 +1,28 @@
+@use "../../styles/abstracts/" as *;
+
+.score-container {
+    @include flex(column, center, center);
+    padding: 3rem;
+    border-radius: 24px;
+
+    @include media-query($tablet) {
+        margin-top: 4rem;
+    }
+
+    @include media-query($mobile) {
+        padding: 2rem;
+        margin-top: 2.5rem;
+    }
+}
+.total-score {
+    font-size: 144px;
+    font-weight: $medium;
+    margin-top: 2.5rem;
+    @include media-query($mobile) {
+        margin-top: 1rem;
+    }
+}
+
+.score-text {
+    margin-top: 1rem;
+}

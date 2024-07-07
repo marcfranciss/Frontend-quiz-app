@@ -1,0 +1,29 @@
+@use "../../styles/abstracts/" as *;
+
+.subject-container {
+    @include flex(row, null, center);
+    @include option-bg;
+    width: 100%;
+    cursor: pointer;
+    font-weight: $medium;
+    gap: 2rem;
+
+    @include media-query($mobile) {
+        gap: 1rem;
+    }
+}
+
+.subject-container_image {
+    @include flex(null, center, center);
+    $outer: 24px;
+    $gap: 18px;
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: $outer - $gap;
+
+    @include media-query($mobile) {
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 6px;
+    }
+}

@@ -1,0 +1,8 @@
+$tablet: 60em;
+$mobile: 40em;
+
+@mixin media-query($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
