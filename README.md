@@ -12,19 +12,17 @@ We provide the data in a local `data.json` file, so use that to populate the con
 
 Your users should be able to:
 
-- Select a quiz subject [Solution](#quiz-subject)
-- Select a single answer from each question from a choice of four
-- See an error message when trying to submit an answer without making a selection
-- See if they have made a correct or incorrect choice when they submit an answer
-- Move on to the next question after seeing the question result
-- See a completed state with the score after the final question
-- Play again to choose another subject
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Navigate the entire app only using their keyboard [Solution](#keyboard)
-- **Bonus**: Change the app's theme between light and dark
-
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+:white_check_mark: Select a quiz subject [Check solution here](#quiz-subject):point_left:
+:white_check_mark: Select a single answer from each question from a choice of four
+:white_check_mark: See an error message when trying to submit an answer without making a selection
+:white_check_mark: See if they have made a correct or incorrect choice when they submit an answer
+:white_check_mark: Move on to the next question after seeing the question result
+:white_check_mark: See a completed state with the score after the final question
+:white_check_mark: Play again to choose another subject
+:white_check_mark: View the optimal layout for the interface depending on their device's screen size
+:white_check_mark: See hover and focus states for all interactive elements on the page
+:white_check_mark: Navigate the entire app only using their keyboard [Check solution here](#keyboard):point_left:
+:white_check_mark: **Bonus**: Change the app's theme between light and dark
 
 # Frontend Mentor - Frontend quiz app solution
 
@@ -33,7 +31,6 @@ This is a solution to the [Frontend quiz app challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -42,85 +39,33 @@ This is a solution to the [Frontend quiz app challenge on Frontend Mentor](https
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- Select a quiz subject
-- Select a single answer from each question from a choice of four
-- See an error message when trying to submit an answer without making a selection
-- See if they have made a correct or incorrect choice when they submit an answer
-- Move on to the next question after seeing the question result
-- See a completed state with the score after the final question
-- Play again to choose another subject
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Navigate the entire app only using their keyboard
-- **Bonus**: Change the app's theme between light and dark
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./Desktop (1440px).png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile](./Mobile (375px).png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution source files](https://github.com/marcfranciss/Frontend-quiz-app/tree/main/src)
+- Live Site URL: [Add live site URL here](https://marcfranciss.github.io/Frontend-quiz-app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS Preprocessor (SaSS)
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [SaSS](https://sass-lang.com/) - For styles
+- [Typescript](https://www.typescriptlang.org/) - For cleaner JS
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I leared a lot about React's ThemeContext and ThemeProvider. How to use it in dynamically changing themes. Also, scss' mixins and function help greatly in the theme's building process.
 
 ### Continued development
 
@@ -130,30 +75,19 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Katie McTigue's Dark Mode in Sass](https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995) - This is an amazing article which helped me finally understand mixins and how to implement it throughout the project. I'd recommend it to anyone still learning this concept.
+- [David Xu's 'Light mode/Dark mode: Dynamic theming through SCSS mixin'](https://david-x.medium.com/light-mode-dark-mode-dynamic-theming-through-scss-mixin-c86e57a4de49) - This is also an amazing article which helped me minify the usage of mixins and functions for dark/light theme. Check this out as well if you're trying to learn themes using sass.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [MackersDev](https://mackersdev.net)
+- Frontend Mentor - [@marcfranciss](https://www.frontendmentor.io/profile/marcfranciss)
 
 ## Quiz subject
 
-Selecting quiz subject requires that the landing page is visible or the quiz is refreshed/resets.
-
-```setting conditional statement to check if the client has selected a subject in <main> and display the quiz in <section>
+- Selecting quiz subject requires that the landing page is visible or the quiz is refreshed/resets.
+- Setting conditional statement to check if the client has selected a subject in **<main>** and display the quiz in <section>
+```
 const [subjectSelected, setSubjectSelected] = useState(true);
 
 {subjectSelected ? (<main>...</main>) : (<section>...</section>)}
@@ -161,14 +95,14 @@ const [subjectSelected, setSubjectSelected] = useState(true);
 
 ## Keyboard accessibility
 
-To have the options on radio button easily accessible with key board, the 'autoFocus' property is added.
+To have the options on radio button easily accessible with key board, the 'autoFocus' attribute is added.
 
-```autofocus property
+```html
 <input autoFocus />
 ```
 
 Then, for the first radio button to be focussed, a simple code is added 'autoFocus={i===0}', where 'i' is index and '0' is the first item in the index.
 
-```autofocus on 1st option
+```html
 <input autoFocus={i === 0} />
 ```
