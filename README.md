@@ -1,6 +1,6 @@
 # Frontend Mentor - Frontend quiz app
 
-![Design preview for the Frontend quiz app coding challenge](./preview.jpg)
+![Design preview for the Frontend quiz app coding challenge](./Desktop.png)
 
 ## The challenge
 
@@ -43,9 +43,9 @@ This is a solution to the [Frontend quiz app challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![Desktop](./Desktop (1440px).png)
+![Desktop](./Desktop.png)
 
-![Mobile](./Mobile (375px).png)
+![Mobile](./Mobile.png)
 
 ### Links
 
