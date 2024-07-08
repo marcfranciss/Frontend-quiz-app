@@ -12,17 +12,17 @@ We provide the data in a local `data.json` file, so use that to populate the con
 
 Your users should be able to:
 
--:white_check_mark: Select a quiz subject [Check solution here](#quiz-subject):point_left:
--:white_check_mark: Select a single answer from each question from a choice of four
--:white_check_mark: See an error message when trying to submit an answer without making a selection
--:white_check_mark: See if they have made a correct or incorrect choice when they submit an answer
--:white_check_mark: Move on to the next question after seeing the question result
--:white_check_mark: See a completed state with the score after the final question
--:white_check_mark: Play again to choose another subject
--:white_check_mark: View the optimal layout for the interface depending on their device's screen size
--:white_check_mark: See hover and focus states for all interactive elements on the page
--:white_check_mark: Navigate the entire app only using their keyboard [Check solution here](#keyboard):point_left:
--:white_check_mark: **Bonus**: Change the app's theme between light and dark
+- :white_check_mark: Select a quiz subject [Check solution here](#quiz-subject):point_left:
+- :white_check_mark: Select a single answer from each question from a choice of four
+- :white_check_mark: See an error message when trying to submit an answer without making a selection
+- :white_check_mark: See if they have made a correct or incorrect choice when they submit an answer
+- :white_check_mark: Move on to the next question after seeing the question result
+- :white_check_mark: See a completed state with the score after the final question
+- :white_check_mark: Play again to choose another subject
+- :white_check_mark: View the optimal layout for the interface depending on their device's screen size
+- :white_check_mark: See hover and focus states for all interactive elements on the page
+- :white_check_mark: Navigate the entire app only using their keyboard [Check solution here](#keyboard):point_left:
+- :white_check_mark: **Bonus**: Change the app's theme between light and dark
 
 # Frontend Mentor - Frontend quiz app solution
 
